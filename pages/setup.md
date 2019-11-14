@@ -9,8 +9,8 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.We
 
 ## Packages
 
-``` ps
-choco install sqllocaldb -y
+``` powershell
+# choco install sqllocaldb -y Localdb is already part of workload in Visual studio
 choco install dotnetcore-sdk -y
 choco install netfx-4.7.2-devpack -y
 choco install sourcetree -y
