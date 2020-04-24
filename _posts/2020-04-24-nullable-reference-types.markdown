@@ -10,15 +10,16 @@ I wanted to see what are the new NRT in C#8 and how they affect resulting IL.
 So they are actually doing very nothing to the generated IL - compiler is just adding attribute to mark arguments or return types as nullable. 
 This means that all the heavy lifting (determine the null flow and generating warnings on appropriate places) must be done in the compiler/analyzer of the calling code, the code which uses methods/classes with those attributes.
 
-You can see the code below here:
-<https://github.com/videokojot/NullableReferenceTypes>
+#### Useful links:
+- <https://docs.microsoft.com/en-us/dotnet/csharp/nullable-references> *(Info about annotation and warning contexts)*
+- <https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/attributes/nullable-analysis> *(More fine grained control of nullablity for generics/ref/out etc. stuff)*
+- <https://devblogs.microsoft.com/dotnet/try-out-nullable-reference-types/> *(Nice article with examples)*
 
-Other useful links:
-<https://docs.microsoft.com/en-us/dotnet/csharp/nullable-references> Info about annotation and warning contexts
-<https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/attributes/nullable-analysis> More fine grained control of nullablity for generics/ref/out etc. stuff
-<https://devblogs.microsoft.com/dotnet/try-out-nullable-reference-types/> Nice article with examples
+#### Code comparison in ILSpy:
+You can see the code below here (<https://github.com/videokojot/NullableReferenceTypes>)
 
 This code in C#8:
+
 ``` csharp
 using System;
 using System.Runtime.CompilerServices;
