@@ -12,10 +12,16 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.We
 ``` powershell
 # choco install sqllocaldb -y LocalDB is already part of workload in Visual studio
 choco upgrade dotnetcore-sdk -y
-choco upgrade netfx-4.7.2-devpack -y
+# choco upgrade netfx-4.7.2-devpack -y
 choco upgrade sourcetree -y
 choco upgrade vscode -y
-choco upgrade visualstudio2019community -y
+choco upgrade visualstudio2019community -y --package-parameters "--add Microsoft.VisualStudio.Component.CoreEditor
+--add Microsoft.VisualStudio.Workload.NetCoreTools
+--add Microsoft.VisualStudio.Workload.NetWeb
+--add Microsoft.VisualStudio.Workload.Node
+--add Microsoft.VisualStudio.Workload.VisualStudioExtension
+--add Microsoft.VisualStudio.Workload.ManagedGame
+--add Microsoft.VisualStudio.Workload.ManagedDesktop"
 choco upgrade visualstudio2017community -y
 choco upgrade resharper -y
 choco upgrade jetbrains-rider -y
@@ -52,6 +58,9 @@ choco upgrade powershell-core -y --install-arguments='"ADD_EXPLORER_CONTEXT_MENU
 - pretty putty
 - lister.exe
 - Windows Terminal (in store)
+
+# Windows setup
+https://github.com/Disassembler0/Win10-Initial-Setup-Script
 
 ## TODOs:
 - include visual studio code extensions
