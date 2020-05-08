@@ -1,0 +1,5 @@
+- pc upgrade
+- debug of remotre kubernetes setup
+- serilog - two fields with same name
+- Remote vs debug of docker in kubernetes
+- static initalizers static constructur order of run,partial, initializers ctor etc, base classes
