@@ -10,18 +10,12 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.We
 ## Packages
 
 ``` powershell
-# choco install sqllocaldb -y LocalDB is already part of workload in Visual studio
+# choco install sqllocaldb -y  #LocalDB is already part of workload in Visual studio, and there can be version mismatch
 choco upgrade dotnetcore-sdk -y
 # choco upgrade netfx-4.7.2-devpack -y
-choco upgrade sourcetree -y
+# choco upgrade sourcetree -y  # for some reason the automated install is not working (maybe the required login from atlassian)
 choco upgrade vscode -y
-choco upgrade visualstudio2019community -y --package-parameters "--add Microsoft.VisualStudio.Component.CoreEditor
---add Microsoft.VisualStudio.Workload.NetCoreTools
---add Microsoft.VisualStudio.Workload.NetWeb
---add Microsoft.VisualStudio.Workload.Node
---add Microsoft.VisualStudio.Workload.VisualStudioExtension
---add Microsoft.VisualStudio.Workload.ManagedGame
---add Microsoft.VisualStudio.Workload.ManagedDesktop"
+choco upgrade visualstudio2019community -y
 choco upgrade visualstudio2017community -y
 choco upgrade resharper -y
 choco upgrade jetbrains-rider -y
@@ -52,6 +46,7 @@ choco upgrade youtube-dl -y
 choco upgrade sublimetext3 -y
 choco upgrade spotify -y
 choco upgrade powershell-core -y --install-arguments='"ADD_EXPLORER_CONTEXT_MENU_OPENPOWERSHELL=1 REGISTER_MANIFEST=1 ENABLE_PSREMOTING=1"'
+choco upgrade rabbitmq -y
 ```
 
 ## Manual setup:
@@ -65,8 +60,3 @@ https://github.com/Disassembler0/Win10-Initial-Setup-Script
 ## TODOs:
 - include visual studio code extensions
 - include visual studio extensions
-- include visual studio workloads
-  - <https://docs.microsoft.com/en-us/visualstudio/install/use-command-line-parameters-to-install-visual-studio?view=vs-2019>
-  - <https://docs.microsoft.com/en-us/visualstudio/install/workload-component-id-vs-community?vs-2019&view=vs-2019>
-  - <https://github.com/jberezanski/ChocolateyPackages/blob/master/chocolatey-visualstudio.extension/EXAMPLES.md>
-- include vscode extensions
