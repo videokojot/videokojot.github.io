@@ -4,7 +4,7 @@
 First install chocolatey (open in Admin mode):
 <https://chocolatey.org/install>
 ``` ps
-Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 ```
 
 ## Packages
@@ -16,7 +16,7 @@ choco upgrade dotnetcore-sdk -y
 # choco upgrade sourcetree -y  # for some reason the automated install is not working (maybe the required login from atlassian)
 choco upgrade vscode -y
 choco upgrade visualstudio2019community -y
-choco upgrade visualstudio2017community -y
+# choco upgrade visualstudio2017community -y
 choco upgrade resharper -y
 choco upgrade jetbrains-rider -y
 choco upgrade fiddler -y
@@ -35,11 +35,10 @@ choco upgrade microsoft-teams -y
 choco upgrade openvpn -y
 choco upgrade nodejs -y
 choco upgrade docker-desktop -y
-choco upgrade notepadplusplus.install -y
-choco upgrade 7zip.install -y
+choco upgrade 7zip -y
 choco upgrade vlc -y
 choco upgrade sql-server-management-studio -y
-choco upgrade winscp.install -y
+choco upgrade winscp -y
 choco upgrade ruby -y
 choco upgrade dropbox -y
 choco upgrade youtube-dl -y
@@ -54,9 +53,11 @@ choco upgrade rabbitmq -y
 - lister.exe
 - Windows Terminal (in store)
 
-# Windows setup
-https://github.com/Disassembler0/Win10-Initial-Setup-Script
+# Windows setup (remove bloat, set basic settins)
+upstream: https://github.com/Disassembler0/Win10-Initial-Setup-Script
+my own fork: https://github.com/videokojot/Win10-Initial-Setup-Script
 
 ## TODOs:
 - include visual studio code extensions
 - include visual studio extensions
+- ruby jekyll setup
