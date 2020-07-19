@@ -46,12 +46,15 @@ choco upgrade sublimetext3 -y
 choco upgrade spotify -y
 choco upgrade powershell-core -y --install-arguments='"ADD_EXPLORER_CONTEXT_MENU_OPENPOWERSHELL=1 REGISTER_MANIFEST=1 ENABLE_PSREMOTING=1"'
 choco upgrade rabbitmq -y
+choco upgrade greenshot -y
 ```
 
 ## Manual setup:
 - pretty putty
 - lister.exe
 - Windows Terminal (in store)
+- R# strcutured plugin https://plugins.jetbrains.com/plugin/12083-structured-logging
+
 
 # Windows setup (remove bloat, set basic settins)
 upstream: https://github.com/Disassembler0/Win10-Initial-Setup-Script
