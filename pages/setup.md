@@ -11,7 +11,7 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 
 ``` powershell
 # choco install sqllocaldb -y  #LocalDB is already part of workload in Visual studio, and there can be version mismatch
-choco upgrade dotnetcore-sdk -y
+# choco upgrade dotnetcore-sdk -y
 # choco upgrade netfx-4.7.2-devpack -y
 # choco upgrade sourcetree -y  # for some reason the automated install is not working (maybe the required login from atlassian)
 choco upgrade vscode -y
@@ -47,6 +47,7 @@ choco upgrade spotify -y
 choco upgrade powershell-core -y --install-arguments='"ADD_EXPLORER_CONTEXT_MENU_OPENPOWERSHELL=1 REGISTER_MANIFEST=1 ENABLE_PSREMOTING=1"'
 choco upgrade rabbitmq -y
 choco upgrade greenshot -y
+choco upgrade postman -y
 ```
 
 ## Manual setup:
