@@ -48,6 +48,8 @@ choco upgrade powershell-core -y --install-arguments='"ADD_EXPLORER_CONTEXT_MENU
 choco upgrade rabbitmq -y
 choco upgrade greenshot -y
 choco upgrade postman -y
+choco upgrade github -y
+choco upgrade kubernetes.cli -y
 ```
 
 ## Manual setup:
@@ -55,6 +57,9 @@ choco upgrade postman -y
 - lister.exe
 - Windows Terminal (in store)
 - R# strcutured plugin https://plugins.jetbrains.com/plugin/12083-structured-logging
+
+- dnSpy https://github.com/0xd4d/dnSpy/releases
+- superBenchamerker
 
 
 # Windows setup (remove bloat, set basic settins)
